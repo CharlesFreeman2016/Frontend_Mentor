@@ -1,0 +1,160 @@
+body {
+    background: #0D1A2D;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.card {
+    background: #15273F;
+    width: 300px;
+    height: 540px;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 30vh;
+    margin-bottom: 10%;
+    box-shadow: 30px 50px 50px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.card-img {
+    position: relative;
+    width: 100%;
+    height: 56%;
+    z-index: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    /* background: url('./images/image-equilibrium.jpg') no-repeat center fixed;
+    background-size: contain; */
+}
+
+.card-img::after {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    opacity: 0;
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #00FFF8;
+    pointer-events: none;
+}
+
+#eye {
+    position: absolute;
+    top: 28%;
+    left: 25%;
+    z-index: 1;
+    transform: translate(100%, 100%);
+    display: none;
+
+}
+
+.card-img:hover>#eye {
+    display: block;
+}
+
+.card-img:hover:after {
+    opacity: 0.5;
+}
+
+.card-avatar {
+    width: 45px;
+    margin-right: 10px;
+}
+
+img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.card-head {
+    font-size: small;
+    cursor: pointer;
+}
+
+.card-head:hover {
+    color: #00FFF8;
+}
+
+.card-info {
+    color: #8195B0;
+}
+
+.card-extra {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    color: #00FFF8;
+    font-size: bolder;
+}
+
+.card-time {
+    display: flex;
+    align-items: center;
+    color: #8195B0;
+    justify-content: space-between;
+    width: 32%;
+}
+
+.creator {
+    display: flex;
+}
+
+.creator p:hover {
+    color: #00FFF8;
+    cursor: pointer;
+}
+
+.title {
+    color: #8195B0;
+}
+
+hr {
+    background: #8195B0;
+    border: none;
+    height: 1px;
+    margin-bottom: 20px;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-weight: 16px;
+    color: #8195B0;
+}
+
+
+
+@media (max-width:375px) {
+
+    .card-price,
+    .card-time {
+        width: 37%;
+    }
+
+    .card {
+        margin-top: 20vh;
+        height: 490px;
+    }
+
+}
